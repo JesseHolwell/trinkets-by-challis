@@ -54,7 +54,7 @@ const ProductGallery = () => {
       // Simulating fetching images from src/assets/products
       const images = craftImages.map((x) => ({
         name: "removeme",
-        src: "src/assets/products/" + x.src,
+        src: "products/" + x.src,
       }));
       setCrafts(images);
     };
@@ -72,7 +72,7 @@ const ProductGallery = () => {
   };
 
   return (
-    <section id="craftGallery" className="container text-center py-24 sm:py-32">
+    <section id="gallery" className="container text-center py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold ">
         Some of my{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
