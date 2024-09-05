@@ -14,23 +14,25 @@ import { Sponsors } from "./components/Sponsors";
 import { Team } from "./components/Team";
 import { Testimonials } from "./components/Testimonials";
 import "./App.css";
+import ProductGallery from "./components/ProductGallery";
 
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <About />
-      <HowItWorks />
-      <Features />
-      <Services />
+      {/* <HowItWorks /> */}
+      <ProductGallery />
+      {/* <Features /> */}
+      {/* <Services /> */}
       <Cta />
-      <Testimonials />
-      <Team />
-      <Pricing />
+      {/* <Testimonials /> */}
+      {/* <Team /> */}
+      {/* <Pricing /> */}
       <Newsletter />
-      <FAQ />
+      {/* <FAQ /> */}
       <Footer />
       <ScrollToTop />
     </>
