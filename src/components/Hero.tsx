@@ -44,7 +44,7 @@ export const Hero = () => {
             I like putting wire on shiny things
           </p>
 
-          <div className="space-y-4 md:space-y-0 md:space-x-4 justify-center flex">
+          <div className="space-x-2 md:space-y-0 md:space-x-4 justify-center flex">
             <Button className="w-full md:w-1/3">
               <FaEnvelope className="mr-2 w-5 h-5" /> Get in touch
             </Button>
