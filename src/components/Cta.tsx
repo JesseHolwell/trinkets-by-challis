@@ -14,8 +14,8 @@ export const Cta = () => {
             </span>
           </h2>
           <p className="text-muted-foreground text-xl mt-4 mb-8 lg:mb-0">
-            Ask me about my next market, or if you can't make it let's have a
-            chat
+            Ask me about my next market, or if you can't make it let's discuss
+            other options
           </p>
         </div>
 
