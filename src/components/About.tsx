@@ -9,7 +9,7 @@ export const About = () => {
           <img
             src={pilot}
             alt=""
-            className="w-[300px] object-contain rounded-r-3xl"
+            className="w-[300px] object-contain rounded-3xl"
           />
           <div className="bg-green-0 flex flex-col justify-between">
             <div className="pb-6">
@@ -20,11 +20,13 @@ export const About = () => {
                 </span>
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                I'm super cool and I make super cool stuff.
-                <br /> Each piece is handcrafted with love and intention. <br />
-                Ethically sourced crystals <br />
-                Handcrafted with care
-                <br /> Infused with positive energy
+                I'm super cool and I make super cool stuff!
+                <ul className="list-disc pl-4 pt-2">
+                  <li>Each piece is handcrafted with love and intention</li>
+                  <li>Ethically sourced crystals</li>
+                  <li>Handcrafted with care</li>
+                  <li>Infused with positive energy</li>
+                </ul>
               </p>
             </div>
 

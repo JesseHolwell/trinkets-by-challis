@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Carousel from "./Carousel";
+import Carousel from "./Portfolio";
+import Portfolio from "./Portfolio";
 
 interface CraftProps {
   name: string;
@@ -85,10 +86,9 @@ const ProductGallery = () => {
       </p>
 
       <div className="relative max-w-6xl mx-auto">
-        <div className="overflow-hidden">
-          <Carousel />
+        <Portfolio />
 
-          {/* <div
+        {/* <div
             className="flex transition-transform duration-300 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 25}%)` }}
           >
@@ -107,7 +107,6 @@ const ProductGallery = () => {
               </Card>
             ))}
           </div> */}
-        </div>
         {/* <Button
           onClick={prevImage}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full p-2"

@@ -48,6 +48,7 @@ export const Hero = () => {
 
           <div className="space-y-4 w-min">
             <Button className="w-full bg-[#9acd32] hover:bg-[#9acd32] text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+              <FaEnvelope className="mr-2 h-4 w-4" />
               Get in touch
             </Button>
             <div className="flex justify-center space-x-4">

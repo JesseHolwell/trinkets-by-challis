@@ -15,7 +15,7 @@ import { Team } from "./components/Team";
 import { Testimonials } from "./components/Testimonials";
 import "./App.css";
 import ProductGallery from "./components/ProductGallery";
-import Carousel from "./components/Carousel";
+import Carousel from "./components/Portfolio";
 
 function App() {
   return (

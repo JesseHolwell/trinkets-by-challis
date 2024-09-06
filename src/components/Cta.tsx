@@ -14,13 +14,14 @@ export const Cta = () => {
             </span>
           </h2>
           <p className="text-muted-foreground text-xl mt-4 mb-8 lg:mb-0">
-            Come visit me at a market, or if you can't make it send me an email
-            and let's chat
+            Ask me about my next market, or if you can't make it let's have a
+            chat
           </p>
         </div>
 
         <div className="space-y-4 lg:col-start-2">
           <Button className="w-auto bg-[#9acd32] hover:bg-[#9acd32] text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+            <FaEnvelope className="mr-2 h-4 w-4" />
             Get in touch
           </Button>
 
