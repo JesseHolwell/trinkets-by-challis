@@ -25,9 +25,6 @@ const craftImages = [
   },
   { src: "products/2.jpg" },
   {
-    src: "products/9.jpg",
-  },
-  {
     src: "products/3.jpg",
   },
   {
@@ -38,16 +35,13 @@ const craftImages = [
     src: "products/4.jpg",
   },
   {
-    src: "products/5.jpg",
-  },
-  {
     src: "products/6.webp",
   },
   {
-    src: "products/7.jpg",
+    src: "products/5.jpg",
   },
   {
-    src: "products/8.jpg",
+    src: "products/7.jpg",
   },
 ];
 
