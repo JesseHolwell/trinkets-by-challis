@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Carousel from "./Carousel";
 
 interface CraftProps {
   name: string;
@@ -85,7 +86,9 @@ const ProductGallery = () => {
 
       <div className="relative max-w-6xl mx-auto">
         <div className="overflow-hidden">
-          <div
+          <Carousel />
+
+          {/* <div
             className="flex transition-transform duration-300 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 25}%)` }}
           >
@@ -94,8 +97,6 @@ const ProductGallery = () => {
                 key={index}
                 className="bg-muted/50 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 p-4"
               >
-                {/* <CardHeader>
-                  <CardTitle className="grid gap-4 place-items-center"> */}
                 <img
                   src={craft.src}
                   alt={craft.name}
@@ -103,14 +104,11 @@ const ProductGallery = () => {
                   height={200}
                   className="w-full h-auto object-cover rounded-lg"
                 />
-                {/* <p className="mt-2 text-center text-sm">{craft.name}</p> */}
-                {/* </CardTitle> */}
-                {/* </CardHeader> */}
               </Card>
             ))}
-          </div>
+          </div> */}
         </div>
-        <Button
+        {/* <Button
           onClick={prevImage}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full p-2"
           variant="outline"
@@ -127,7 +125,7 @@ const ProductGallery = () => {
           aria-label="Next image"
         >
           <ChevronRight className="w-6 h-6" />
-        </Button>
+        </Button> */}
       </div>
     </section>
   );
