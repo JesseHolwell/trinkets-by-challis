@@ -53,7 +53,7 @@ const routeList: RouteProps[] = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-[#1e140a] border-[#1e140a] text-[#f0ead6] dark:bg-background">
+    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-[#a78b62] border-[#a78b62] text-[#fff] dark:bg-background">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
@@ -62,7 +62,7 @@ export const Navbar = () => {
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
-              <LogoIcon />
+              {/* <LogoIcon /> */}
               Trinkets by Challis
             </a>
           </NavigationMenuItem>

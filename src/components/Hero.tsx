@@ -2,10 +2,10 @@ import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { FaEtsy, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaEtsy, FaInstagram, FaEnvelope, FaShoppingBag } from "react-icons/fa";
 
 const ETSY_URL = "etsy.com";
-const INSTAGRAM_URL = "instagram.com";
+const INSTAGRAM_URL = "https://www.instagram.com/challis.trinkets/";
 
 export const Hero = () => {
   return (
@@ -30,7 +30,7 @@ export const Hero = () => {
             {" "}
             {/* Soft cream color for text */}
             <h1 className="inline">
-              <span className="inline bg-gradient-to-r from-[#a78b62] to-[#d2a679] text-transparent bg-clip-text">
+              <span className="inline bg-gradient-to-r from-[#fd8712] to-[#d2a679] text-transparent bg-clip-text">
                 Trinkets
               </span>{" "}
               by
@@ -42,11 +42,33 @@ export const Hero = () => {
             </h2>
           </main>
 
-          <p className="text-xl text-white ml-2">
+          <p className="text-xl max-w-2xl">
             I like putting wire on shiny things
           </p>
 
-          <div className=" justify-center flex flex-col">
+          <div className="space-y-4 w-min">
+            <Button className="w-full bg-[#9acd32] hover:bg-[#9acd32] text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+              Get in touch
+            </Button>
+            <div className="flex justify-center space-x-4">
+              <Button
+                variant="outline"
+                className="bg-transparent border-[#F0E68C] text-[#F0E68C] hover:bg-[#F0E68C] hover:text-[#2C3E50] rounded-full transition duration-300 ease-in-out"
+              >
+                <FaShoppingBag className="mr-2 h-4 w-4" />
+                Etsy
+              </Button>
+              <Button
+                variant="outline"
+                className="bg-transparent border-[#F0E68C] text-[#F0E68C] hover:bg-[#F0E68C] hover:text-[#2C3E50] rounded-full transition duration-300 ease-in-out"
+              >
+                <FaInstagram className="mr-2 h-4 w-4" />
+                Instagram
+              </Button>
+            </div>
+          </div>
+
+          {/* <div className=" justify-center flex flex-col">
             <Button className="w-1/3 m-2">
               <FaEnvelope className="mr-2 w-5 h-5" /> Get in touch
             </Button>
@@ -70,7 +92,7 @@ export const Hero = () => {
             >
               <FaInstagram className="mr-2 w-5 h-5" /> Instagram
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

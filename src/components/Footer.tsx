@@ -1,5 +1,7 @@
 import { LogoIcon } from "./Icons";
 
+const currentYear = new Date().getFullYear();
+
 export const Footer = () => {
   return (
     <footer id="footer">
@@ -152,7 +154,7 @@ export const Footer = () => {
 
       <section className="container p-14 text-center">
         <h3>
-          &copy; Made with love by{" "}
+          Website made with love by{" "}
           <a
             rel="noreferrer noopener"
             target="_blank"
@@ -162,6 +164,7 @@ export const Footer = () => {
             Jesse
           </a>
         </h3>
+        <h3>&copy; Copyright {currentYear}</h3>
       </section>
     </footer>
   );
