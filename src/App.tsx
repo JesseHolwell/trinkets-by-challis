@@ -15,6 +15,7 @@ import { Team } from "./components/Team";
 import { Testimonials } from "./components/Testimonials";
 import "./App.css";
 import ProductGallery from "./components/ProductGallery";
+import Carousel from "./components/Carousel";
 
 function App() {
   return (
@@ -22,16 +23,16 @@ function App() {
       <Navbar />
       <Hero />
       {/* <Sponsors /> */}
-      <About />
       {/* <HowItWorks /> */}
       <ProductGallery />
+      <About />
       {/* <Features /> */}
       {/* <Services /> */}
       <Cta />
       {/* <Testimonials /> */}
       {/* <Team /> */}
       {/* <Pricing /> */}
-      <Newsletter />
+      {/* <Newsletter /> */}
       {/* <FAQ /> */}
       <Footer />
       <ScrollToTop />

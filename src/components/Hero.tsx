@@ -24,35 +24,37 @@ export const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
 
       {/* Overlay content */}
-      <div className="container relative z-10 grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
-        <div className="text-center lg:text-start space-y-6">
+      <div className="container relative z-10 grid lg:grid-cols-2 place-items-center mt-16 py-32 gap-10">
+        <div className="text-start space-y-6">
           <main className="text-5xl md:text-6xl font-bold text-white">
+            {" "}
+            {/* Soft cream color for text */}
             <h1 className="inline">
-              <span className="inline bg-gradient-to-r from-[#F596D3] to-[#D247BF] text-transparent bg-clip-text">
+              <span className="inline bg-gradient-to-r from-[#a78b62] to-[#d2a679] text-transparent bg-clip-text">
                 Trinkets
               </span>{" "}
               by
             </h1>{" "}
             <h2 className="inline">
-              <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
+              <span className="inline bg-gradient-to-r from-[#9acd32] via-[#9acd32] to-[#6b8e23] text-transparent bg-clip-text">
                 Challis
               </span>{" "}
             </h2>
           </main>
 
-          <p className="text-xl text-white md:w-10/12 mx-auto lg:mx-0 ml-4">
+          <p className="text-xl text-white ml-2">
             I like putting wire on shiny things
           </p>
 
-          <div className="space-x-2 md:space-y-0 md:space-x-4 justify-center flex">
-            <Button className="w-full md:w-1/3">
+          <div className=" justify-center flex flex-col">
+            <Button className="w-1/3 m-2">
               <FaEnvelope className="mr-2 w-5 h-5" /> Get in touch
             </Button>
             <a
               rel="noreferrer noopener"
               href="https://etsy.com"
               target="_blank"
-              className={`w-full md:w-1/4 ${buttonVariants({
+              className={`w-1/3 m-2 ${buttonVariants({
                 variant: "outline",
               })}`}
             >
@@ -62,7 +64,7 @@ export const Hero = () => {
               rel="noreferrer noopener"
               href="https://instagram.com"
               target="_blank"
-              className={`w-full md:w-1/4 ${buttonVariants({
+              className={`w-1/3 m-2 ${buttonVariants({
                 variant: "outline",
               })}`}
             >

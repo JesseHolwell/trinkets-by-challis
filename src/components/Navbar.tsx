@@ -25,21 +25,21 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#about",
-    label: "About me",
-  },
-  {
     href: "#gallery",
     label: "Gallery",
+  },
+  {
+    href: "#about",
+    label: "About me",
   },
   {
     href: "#contact",
     label: "Contact",
   },
-  {
-    href: "#newsletter",
-    label: "Newsletter",
-  },
+  // {
+  //   href: "#newsletter",
+  //   label: "Newsletter",
+  // },
   // {
   //   href: "#pricing",
   //   label: "Pricing",
@@ -53,7 +53,7 @@ const routeList: RouteProps[] = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-[#1e140a] border-[#1e140a] text-[#f0ead6] dark:bg-background">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
@@ -69,7 +69,7 @@ export const Navbar = () => {
 
           {/* mobile */}
           <span className="flex md:hidden">
-            <ModeToggle />
+            {/* <ModeToggle /> */}
 
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
@@ -131,7 +131,7 @@ export const Navbar = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex gap-2">
+          <div className="hidden md:flex">
             {/* <a
               rel="noreferrer noopener"
               href="https://github.com/leoMirandaa/shadcn-landing-page.git"
@@ -142,7 +142,7 @@ export const Navbar = () => {
               Github
             </a> */}
 
-            <ModeToggle />
+            {/* <ModeToggle /> */}
           </div>
         </NavigationMenuList>
       </NavigationMenu>

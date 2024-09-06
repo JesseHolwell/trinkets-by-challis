@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['"Futura LT W01 Light"', "sans-serif"], // Update this line
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
