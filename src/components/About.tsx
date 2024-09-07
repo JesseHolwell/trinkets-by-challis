@@ -1,5 +1,5 @@
 import { Statistics } from "./Statistics";
-import pilot from "../assets/challis.webp";
+import profilePicture from "../assets/challis-forest.jpg";
 import sacred from "../assets/1303400492.svg";
 
 export const About = () => {
@@ -8,7 +8,7 @@ export const About = () => {
       <div className="bg-muted/50 border rounded-lg py-12 relative overflow-hidden">
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12 ">
           <img
-            src={pilot}
+            src={profilePicture}
             alt=""
             className="w-[300px] object-contain rounded-3xl z-10"
           />
@@ -31,7 +31,7 @@ export const About = () => {
               </p>
             </div>
           </div>
-          <div className="sacred-geometry w-full md:w-[25%]">
+          <div className="sacred-geometry w-[400px]">
             <img src={sacred} alt="" />
           </div>
         </div>

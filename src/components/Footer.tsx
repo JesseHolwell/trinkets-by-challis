@@ -159,7 +159,7 @@ export const Footer = () => {
             rel="noreferrer noopener"
             target="_blank"
             href="https://jesseholwell.com/"
-            className="text-primary transition-all border-primary hover:border-b-2"
+            className="text-primary transition-all border-primary hover:border-b-2 underline"
           >
             Jesse
           </a>
