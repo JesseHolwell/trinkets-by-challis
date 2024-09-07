@@ -20,7 +20,7 @@ export const Cta = () => {
         </div>
 
         <div className="space-y-4 lg:col-start-2">
-          <Button className="w-auto bg-[#6b8e23] hover:bg-[#6b8e23] text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+          <Button className="w-auto bg-[#5c9612] hover:bg-[#5c9612] text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
             <FaEnvelope className="mr-2 h-4 w-4" />
             Get in touch
           </Button>

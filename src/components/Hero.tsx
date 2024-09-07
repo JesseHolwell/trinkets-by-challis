@@ -37,7 +37,7 @@ export const Hero = () => {
             </h1>{" "}
             <h2 className="ml-4 text-5xl handwriting">
               by{" "}
-              <span className="inline bg-gradient-to-r from-[#9acd32] via-[#5c9903] to-[#5c9903] text-transparent bg-clip-text">
+              <span className="inline bg-gradient-to-r from-[#F0E68C] via-[#F0E68C] to-[#F0E68C] text-transparent bg-clip-text">
                 Challis
               </span>
             </h2>
@@ -48,7 +48,7 @@ export const Hero = () => {
           </p>
 
           <div className="space-y-4 w-min">
-            <Button className="w-full bg-[#5c9903] hover:bg-[#5c9903] text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+            <Button className="w-full bg-[#5c9612] hover:bg-[#5c9612] text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
               <FaEnvelope className="mr-2 h-4 w-4" />
               Get in touch
             </Button>
