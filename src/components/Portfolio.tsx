@@ -51,7 +51,7 @@ export default function Portfolio() {
       <Carousel
         images={craftImages}
         canAutoPlay="false"
-        isAutoPlaying="true"
+        isAutoPlaying="false"
         hasMediaButton="false"
         hasSizeButton="false"
         hasIndexBoard="false"

@@ -26,19 +26,20 @@ export const Hero = () => {
       {/* Overlay content */}
       <div className="container relative z-10 grid lg:grid-cols-2 place-items-center mt-16 py-32 gap-10">
         <div className="text-start space-y-6">
-          <main className="text-5xl md:text-6xl font-bold text-white">
+          <main className="font-bold text-white -ml-4">
             {" "}
             {/* Soft cream color for text */}
-            <h1 className="inline">
-              <span className="inline bg-gradient-to-r from-[#fd8712] to-[#d2a679] text-transparent bg-clip-text">
+            <h1>
+              <span className="inline text-7xl bg-gradient-to-r from-[#fd8712] to-[#d2a679] text-transparent bg-clip-text">
                 Trinkets
-              </span>{" "}
-              by
+              </span>
+              <br />
             </h1>{" "}
-            <h2 className="inline">
-              <span className="inline bg-gradient-to-r from-[#9acd32] via-[#9acd32] to-[#6b8e23] text-transparent bg-clip-text">
+            <h2 className="ml-4 text-5xl handwriting">
+              by{" "}
+              <span className="inline bg-gradient-to-r from-[#9acd32] via-[#5c9903] to-[#5c9903] text-transparent bg-clip-text">
                 Challis
-              </span>{" "}
+              </span>
             </h2>
           </main>
 
@@ -47,7 +48,7 @@ export const Hero = () => {
           </p>
 
           <div className="space-y-4 w-min">
-            <Button className="w-full bg-[#9acd32] hover:bg-[#9acd32] text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+            <Button className="w-full bg-[#5c9903] hover:bg-[#5c9903] text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
               <FaEnvelope className="mr-2 h-4 w-4" />
               Get in touch
             </Button>
