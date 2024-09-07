@@ -3,18 +3,18 @@ import Carousel from "react-gallery-carousel";
 import "react-gallery-carousel/dist/index.css";
 
 // Static image paths
-const staticImages = [
-  "/products/11.jpg",
-  "/products/2.jpg",
-  "/products/9.jpg",
-  "/products/3.jpg",
-  "/products/10.jpg",
-  "/products/4.jpg",
-  "/products/5.jpg",
-  "/products/6.webp",
-  "/products/7.jpg",
-  "/products/8.jpg",
-];
+// const staticImages = [
+//   "/products/11.jpg",
+//   "/products/2.jpg",
+//   "/products/9.jpg",
+//   "/products/3.jpg",
+//   "/products/10.jpg",
+//   "/products/4.jpg",
+//   "/products/5.jpg",
+//   "/products/6.webp",
+//   "/products/7.jpg",
+//   "/products/8.jpg",
+// ];
 
 const craftImages = [
   // {
@@ -50,12 +50,12 @@ export default function Portfolio() {
     <div className="">
       <Carousel
         images={craftImages}
-        canAutoPlay="false"
-        isAutoPlaying="false"
-        hasMediaButton="false"
-        hasSizeButton="false"
-        hasIndexBoard="false"
-        transitionSpeed="4"
+        canAutoPlay={false}
+        isAutoPlaying={false}
+        hasMediaButton={false}
+        hasSizeButton={false}
+        hasIndexBoard={false}
+        transitionSpeed={4}
         thumbnailWidth="23%"
         thumbnailHeight="23%"
         // style="{{w-100 md:w-auto}}"
