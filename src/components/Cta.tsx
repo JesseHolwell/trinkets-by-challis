@@ -1,12 +1,48 @@
+"use client";
+
 import { FaEnvelope } from "react-icons/fa";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export const Cta = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section id="contact" className="bg-muted/50 py-16 my-24 sm:my-32">
-      <div className="container lg:grid lg:grid-cols-2 place-items-center">
-        <div className="lg:col-start-1">
-          <h2 className="text-3xl md:text-4xl font-bold ">
+    <section
+      id="contact"
+      className="bg-muted/50 py-16 my-24 sm:my-32"
+      ref={ref}
+    >
+      <motion.div
+        className="container lg:grid lg:grid-cols-2 place-items-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
+        <motion.div className="lg:col-start-1" variants={itemVariants}>
+          <h2 className="text-3xl md:text-4xl font-bold">
             I also do
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
               {" "}
@@ -17,23 +53,18 @@ export const Cta = () => {
             Ask me about my next market, or if you can't make it let's discuss
             other options
           </p>
-        </div>
+        </motion.div>
 
-        <div className="space-y-4 lg:col-start-2">
-          <Button className="w-auto bg-[#5c9612] hover:bg-[#5c9612] text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+        <motion.div
+          className="space-y-4 lg:col-start-2"
+          variants={itemVariants}
+        >
+          <Button className="w-full bg-[#5c9612] hover:bg-[#5c9612] text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
             <FaEnvelope className="mr-2 h-4 w-4" />
             Get in touch
           </Button>
-
-          {/* <Button className="w-full md:mr-4 md:w-auto">
-            <FaEnvelope className="mr-2 w-5 h-5" /> Get in touch
-          </Button> */}
-
-          {/* <Button variant="outline" className="w-full md:w-auto">
-            View all features
-          </Button> */}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

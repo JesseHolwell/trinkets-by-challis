@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
-// import Image from "next/image";
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Carousel from "./Portfolio";
 import Portfolio from "./Portfolio";
 
 interface CraftProps {
@@ -12,48 +13,37 @@ interface CraftProps {
 }
 
 const craftImages = [
-  // {
-  //   src: "1.jpg",
-  // },
-  {
-    src: "11.jpg",
-  },
+  { src: "11.jpg" },
   { src: "2.jpg" },
-  {
-    src: "9.jpg",
-  },
-  {
-    src: "3.jpg",
-  },
-  {
-    src: "10.jpg",
-  },
-
-  {
-    src: "4.jpg",
-  },
-  {
-    src: "5.jpg",
-  },
-  {
-    src: "6.webp",
-  },
-  {
-    src: "7.jpg",
-  },
-  {
-    src: "8.jpg",
-  },
+  { src: "9.jpg" },
+  { src: "3.jpg" },
+  { src: "10.jpg" },
+  { src: "4.jpg" },
+  { src: "5.jpg" },
+  { src: "6.webp" },
+  { src: "7.jpg" },
+  { src: "8.jpg" },
 ];
 
 const ProductGallery = () => {
   const [crafts, setCrafts] = useState<CraftProps[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const sectionRef = useRef(null);
+  const titleRef = useRef(null);
+  const descriptionRef = useRef(null);
+  const portfolioRef = useRef(null);
+
+  const sectionInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const titleInView = useInView(titleRef, { once: true, amount: 0.5 });
+  const descriptionInView = useInView(descriptionRef, {
+    once: true,
+    amount: 0.5,
+  });
+  const portfolioInView = useInView(portfolioRef, { once: true, amount: 0.3 });
+
   useEffect(() => {
-    // In a real application, this would be replaced with an API call or import
     const fetchCrafts = async () => {
-      // Simulating fetching images from src/assets/products
       const images = craftImages.map((x) => ({
         name: "removeme",
         src: "products/" + x.src,
@@ -74,59 +64,46 @@ const ProductGallery = () => {
   };
 
   return (
-    <section id="gallery" className="container text-center py-24 sm:py-32">
-      <h2 className="text-3xl md:text-4xl font-bold ">
+    <motion.section
+      ref={sectionRef}
+      id="gallery"
+      className="container text-center py-24 sm:py-32"
+      initial={{ opacity: 0, y: 50 }}
+      animate={sectionInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.h2
+        ref={titleRef}
+        className="text-3xl md:text-4xl font-bold"
+        initial={{ opacity: 0, y: 20 }}
+        animate={titleInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ delay: 0.2, duration: 0.5 }}
+      >
         Some of my{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           crafts{" "}
         </span>
-      </h2>
-      <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
+      </motion.h2>
+      <motion.p
+        ref={descriptionRef}
+        className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground"
+        initial={{ opacity: 0, y: 20 }}
+        animate={descriptionInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ delay: 0.4, duration: 0.5 }}
+      >
         They're almost as beautiful as me
-      </p>
+      </motion.p>
 
-      <div className="relative max-w-6xl mx-auto">
+      <motion.div
+        ref={portfolioRef}
+        className="relative max-w-6xl mx-auto"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={portfolioInView ? { opacity: 1, scale: 1 } : {}}
+        transition={{ delay: 0.6, duration: 0.5 }}
+      >
         <Portfolio />
-
-        {/* <div
-            className="flex transition-transform duration-300 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 25}%)` }}
-          >
-            {crafts.map((craft, index) => (
-              <Card
-                key={index}
-                className="bg-muted/50 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 p-4"
-              >
-                <img
-                  src={craft.src}
-                  alt={craft.name}
-                  width={200}
-                  height={200}
-                  className="w-full h-auto object-cover rounded-lg"
-                />
-              </Card>
-            ))}
-          </div> */}
-        {/* <Button
-          onClick={prevImage}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full p-2"
-          variant="outline"
-          size="icon"
-          aria-label="Previous image"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </Button>
-        <Button
-          onClick={nextImage}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full p-2"
-          variant="outline"
-          size="icon"
-          aria-label="Next image"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </Button> */}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
