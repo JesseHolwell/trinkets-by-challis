@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { FaInstagram, FaEnvelope, FaShoppingBag } from "react-icons/fa";
+import { FaEnvelope, FaInstagram, FaShoppingBag } from "react-icons/fa";
 
 const ETSY_URL = "https://www.etsy.com";
 const INSTAGRAM_URL = "https://www.instagram.com/challis.trinkets/";
