@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import { FaEnvelope, FaInstagram, FaShoppingBag } from "react-icons/fa";
 
 const ETSY_URL = "https://www.etsy.com";
-const INSTAGRAM_URL = "https://www.instagram.com/challis.trinkets/";
+// const INSTAGRAM_URL = "https://www.instagram.com/challis.trinkets/";
+const INSTAGRAM_URL = "https://www.instagram.com/";
 
 export const Hero = () => {
   return (
